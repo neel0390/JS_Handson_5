@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&family=Montserrat&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/f0293cd988.js" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="nav"><h1>JavaSript Handson-5</h1></div>
+      <div class="Q1 Q">
+        <p><b>Count Characters</b></p>
+        <pre>
+                const countCharacters = (S) => 
+        {
+            const B = [];
+            var countA = 0;
+            var countD = 0;
+            
+            for(i = 0;i < S.length;i++){
+                if(S[i] === "A"){
+                countA++;
+                }else if(S[i] === "D"){
+                countD++;
+                }
+            }
+            
+            B.push(countA);
+            B.push(countD);
+            return B;
+        };
+    </pre
+        >
+        <hr />
+      </div>
+      <div class="Q1 Q">
+        <p><b>Count the Heads.</b></p>
+        <pre>
+            var Count_Occ = (s) => 
+        {
+            const alphabets = [];
+            for(let i=0;i < s.length;i++){
+            alphabets.push(s.charAt(i));
+            }
+            const repitive_values = alphabets.filter((alphabet,index) => alphabets.indexOf(alphabet) !== alphabets.lastIndexOf(alphabet));
+            repitive_values.sort(repitive_values);
+            
+            let newstr='';
+            counter = 1;
+            for (let i=0; i < repitive_values.length; i++){
+            if(repitive_values[i] === repitive_values[i+1]){
+            counter += 1;
+            }
+            else{
+            newstr += repitive_values[i] + counter;
+            counter = 1;
+            }
+            }
+            return newstr;
+        };
+    </pre
+        >
+        <hr />
+      </div>
+      <div class="Q1 Q">
+        <p><b>Count the Vowels</b></p>
+        <pre>
+                var Count_Vowels= (S) => 
+        {
+                let count =0;
+                const vovo = "aeiou";
+                for (let i=0; i< S.length; i++){
+                    for (let j=0; j< vovo.length; j++){
+                if(S[i]===vovo[j]){
+                    count ++;
+                    }
+                    }
+                    }
+                return count;
+        };
+    </pre
+        >
+        <hr />
+      </div>
+      <div class="Q1 Q">
+        <p><b>Concatenate the Strings</b></p>
+        <pre>
+                var Concatenate_Strings = (S1, S2) => 
+        {
+            const S3 = S1.concat(S2);
+            return S3;
+        };
+    </pre
+        >
+        <hr />
+      </div>
+      <div class="Q1 Q">
+        <p><b>Find Length</b></p>
+        <pre>
+        const findLength = (S) => 
+        {   let count=0;
+            for(i=0; i< S.length;i++){
+            count++;
+            }
+            return count;
+        };
+
+    </pre
+        >
+        <hr />
+      </div>
+      <div class="Q1 Q">
+        <p><b>Join Strings</b></p>
+        <pre>
+            const joinStrings = (S, P) => 
+        { 
+            let count = S.concat(P);
+                return count;
+        };
+      </pre
+        >
+        <hr />
+      </div>
+      <div class="Q1 Q">
+        <p><b>Plaindrome Check</b></p>
+        <pre>
+            var Palin_Check = (str) =>
+        {
+        let forward =[];
+        let backward = [];
+        counter = 0;
+        for(i=str.length-1; i>=0; i--){
+            backward.push(str.charAt(i))
+        }
+            for(i=0; i < str.length;i++){
+            forward.push(str.charAt(i))
+            }
+            for(i=0; i < str.length; i++){
+            if(forward[i] ===backward[i]){
+                counter += 1
+            }
+            }
+            if(counter === str.length){
+            return "True"
+            }else{
+            return "False"
+            }
+        }
+    </pre
+        >
+        <hr />
+      </div>
+      <div class="Q1 Q">
+        <p><b>Reverse the String</b></p>
+        <pre>
+            var Reverse_String = (str) => 
+        {
+            const temp = [];
+            let reveseStr ='';
+            for(let i=str.length-1; i>=0; i--){
+            temp.push(str.charAt(i));
+            }
+            for(i=0; i< temp.length;i++){
+        reveseStr += temp[i];
+            }
+        return reveseStr;
+        };
+
+    </pre
+        >
+        <hr />
+      </div>
+      <div class="Q1 Q">
+        <p><b>Match the Strings</b></p>
+        <pre>
+        var String_Match = (S1,S2) => 
+    {
+        if(S1===S2){
+        return "YES";
+        }
+        return "NO";
+    };
+
+
+
+    </pre
+        >
+        <hr />
+      </div>
+      <div class="Q1 Q">
+        <p><b>String Replace</b></p>
+        <pre>
+                var Replace = (S, pattern , text) => 
+        {
+            const newStr = S.replace(pattern,text);
+            return newStr;
+        };
+    </pre
+        >
+        <hr />
+      </div>
+      <div class="Q1 Q">
+        <p><b>Split the String</b></p>
+        <pre>
+            var Split_the_string = (S) => 
+    {
+      let newstr = S.split(" ");
+         return newstr;   
+    };
+    </pre
+        >
+        <hr />
+      </div>
+      <div class="Q1 Q">
+        <p><b>Count the Vowels and Consonants</b></p>
+        <pre>
+                    var Count_Vowels= (S) => 
+        {
+            let countV = 0;
+            let vowels = 'aeiou';
+            for( let i=0;i < S.length;i++){
+                for(let j=0;j < vowels.length;j++){
+                if(S[i] === vowels[j]){
+                    countV ++;
+                }
+                }
+            }
+            return countV ;
+        };
+        var Count_Consonants= (S) => 
+        {
+            let countC = 0;
+            let consonant = 'bcdfghjklmnpqrstvwxyz';
+            for( let i=0;i < S.length;i++){
+                for(let j=0;j < consonant.length;j++){
+                if(S[i].toLowerCase() === consonant[j]){
+                    countC ++;
+                }
+                }
+            }
+            return countC ;
+        };
+    </pre
+        >
+        <hr />
+      </div>
+    </div>
+  </body>
+</html>
